@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTHUB - Discover Art</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" href="../static/css/index.css">
+</head>
+
+<body>
+<section class="header">
+    <nav>
+        <a href="/"><img th:src="@{/images/logo.png}" src="../static/images/logo.png"></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="#" th:href="@{/login}" sec:authorize="isAnonymous()">Login/Register</a>
+                </li>
+                <li>
+                    <a href="#" th:href="@{/logout}" sec:authorize="isAuthenticated()">Logout</a>
+                </li>
+                <li>
+                    <a href="#" th:href="@{/shop}">Explore Art</a>
+                </li>
+                <li>
+                    <a href="#" th:href="@{/cart}">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="text-box">
+        <h1>
+            Discover Artistic Treasures
+        </h1>
+        <p>
+            Immerse Yourself in a World of Creativity and Beauty! Unleash Your Inner Artist and Explore a Wonderland of
+            Art and Crafts,<br> Where Every Piece is a Masterpiece.
+        </p>
+        <a href="#" class="hero-btn" th:href="@{/shop}">Explore Now</a>
+    </div>
+</section>
+
+<!-- --------Art Types--------------- -->
+<section class="types">
+    <h1>
+        Art and Crafts Collection
+    </h1>
+    <p>Indulge in Creative Expressions. Discover Unique Art and Crafts.</p>
+    <div class="row">
+        <div class="type-col">
+            <h3>Paintings</h3>
+            <p>Explore a world of colors and emotions through captivating paintings. From landscapes to abstract art,
+                there's something for every art lover.</p>
+        </div>
+        <div class="type-col">
+            <h3>Sculptures</h3>
+            <p>Experience the magic of three-dimensional art. Sculptures crafted with precision and passion to adorn your
+                living space.</p>
+        </div>
+        <div class="type-col">
+            <h3>Handmade Crafts</h3>
+            <p>Discover the charm of handmade crafts. From intricately designed jewelry to beautifully woven textiles,
+                each piece tells a story.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

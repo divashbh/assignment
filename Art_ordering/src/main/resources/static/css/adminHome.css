@@ -1,0 +1,122 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007BFF; /* Blue background color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF; /* Blue background color */
+    padding: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: #00BFFF; /* Dodger Blue - Artistic color */
+}
+
+.nav-items {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #8b4513; /* Saddle Brown - Cakeish color */
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.nav-items a:hover {
+    color: #00BFFF; /* Dodger Blue - Artistic color */
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #00BFFF; /* Dodger Blue - Artistic color */
+}
+
+.welcome-box {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #00BFFF; /* Dodger Blue - Artistic color */
+    border-radius: 10px;
+    background-color: #f0f8ff; /* Alice Blue - Artistic color */
+}
+
+.welcome-box h1 {
+    color: #00BFFF; /* Dodger Blue - Artistic color */
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-size: cover;
+    height: 60.7vh;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f8ff; /* Alice Blue - Artistic color */
+    text-align: center;
+    border: 2px solid #00BFFF; /* Dodger Blue - Artistic color */
+    border-radius: 10px;
+}
+
+.box h2 {
+    color: #00BFFF; /* Dodger Blue - Artistic color */
+    margin-bottom: 10px;
+}
+
+.box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.box a.manage-link {
+    padding: 10px 20px;
+    background-color: #4682b4; /* Steel Blue - Artistic color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.box a.manage-link:hover {
+    background-color: #1e90ff; /* Dodger Blue - Artistic color */
+    border-radius: 5px;
+    border: 2px solid #4682b4; /* Steel Blue - Artistic color */
+}
+
+.group {
+    background-color: #f0f8ff; /* Alice Blue - Artistic color */
+}

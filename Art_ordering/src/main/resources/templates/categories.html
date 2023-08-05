@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/css/categories.css}" href="../static/css/categories.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+<div class="navbar">
+  <div class="logo">
+    <img th:src="@{/images/logo.png}" src="../static/images/logo.png" alt="Logo">
+  </div>
+  <div class="nav-items">
+    <a href="#" th:href="@{/admin}" class="nav-link">Admin Home</a>
+    <a href="#" th:href="@{/logout}" class="nav-link">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+  <a th:href="@{/admin/categories/add}" class="btn-add-category">Add Category</a>
+  <table class="custom-table">
+    <thead>
+    <tr>
+      <th>SN</th>
+      <th>Category Name</th>
+      <th>Delete</th>
+      <th>Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category, iStat : ${categories}">
+      <th scope="row" th:text="${iStat.index + 1}">1</th>
+      <td th:text="${category.name}">Larry</td>
+      <td>
+        <form th:action="@{/admin/categories/delete/{id}(id=${category.id})}" method="post">
+          <button type="submit" class="btn danger-btn">Delete</button>
+        </form>
+      </td>
+      <td>
+        <a th:href="@{/admin/categories/update/{id}(id=${category.id})}" class="btn-update-category">Update</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+
+</html>

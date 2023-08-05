@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #87CEEB;
+}
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/backone.jpg);
+}
+
+nav .logo {
+    margin-right: 20px;
+}
+
+nav img {
+    width: 60px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links ul li:first-child {
+    margin-left: 0;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 18px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li:last-child {
+    position: relative;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-count {
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -17px;
+}
+
+.list-group-item{
+    text-decoration: none;
+}
+/* Reset default list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container for the Categories and Product sections */
+.full {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+/* Styling for the Categories section */
+.Categories {
+    width: 300px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    border: solid black;
+}
+
+.Categories h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.Categories ul {
+    margin-top: 10px;
+}
+
+.Categories li {
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list-group a{
+    text-decoration: none;
+}
+.Categories li:last-child {
+    border-bottom: none;
+}
+
+.Categories li:hover {
+    background-color: #f2f2f2;
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the Product section */
+.Product {
+    flex: 3;
+    padding: 10px
+;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styling for each product box */
+.Box {
+    min-width: 500px;
+    display: flex;
+    background-color: #f8f8f8;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    max-width: 500px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+/* Styling for the image and text section within each product box */
+.Image_Text {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the product image */
+.Image img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-right: 20px;
+    border: solid black;
+}
+
+/* Styling for the product description section */
+.Description {
+    color: #333;
+}
+
+.Description h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.Description h4 {
+    font-size: 16px;
+    color: #000000;
+}
+
+.Description p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the "View Product" button */
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+
+
+.card-body{
+    padding-left: 10px;
+}
+.full{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}

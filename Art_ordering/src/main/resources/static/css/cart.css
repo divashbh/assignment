@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #007BFF; /* Blue background color */
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/backone.jpg);
+}
+
+nav .logo {
+    margin-right: 20px;
+}
+
+nav img {
+    width: 60px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links ul li:first-child {
+    margin-left: 0;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 18px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #1E90FF; /* Dodger Blue - Artistic color */
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li:last-child {
+    position: relative;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-count {
+    background-color: #000000;
+    color: #fff;
+    font-size: 14px;
+    padding: 1px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    right: -17px;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    border: solid black 1px;
+}
+
+.card-body {
+    border-radius: 10px;
+    border: solid black 2px;
+}

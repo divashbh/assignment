@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>viewProduct</title>
+  <link rel="stylesheet" href="final.css">
+  <link rel="stylesheet" href="../static/css/viewProduct.css" th:href="@{/css/viewProduct.css}">
+</head>
+
+<body>
+<nav>
+  <a href=""><img src="../images/logo-final.png" th:src="@{/images/logo.png}"></a>
+  <div class="nav-links">
+    <ul>
+      <li><a class="nav-link" th:href="@{/}" href="#">Home</a></li>
+      <li>
+        <a class="nav-link" th:href="@{/shop}" href="#">Shop</a>
+      </li>
+      <li>
+        <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login}" href="#">Login</a>
+      </li>
+      <li>
+        <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">Logout</a>
+      </li>
+      <li>
+        <a class="nav-link" th:href="@{/cart}" href="#">Cart</a>
+        <span class="cart-count" th:text="${cartCount}">0</span>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-5 d-flex justify-content-center">
+      <img class="image" height="300px" width="300px" src="" th:src="@{${'/productImages/' + product.imageName}}" alt="">
+    </div>
+    <div class="col-sm-7 mt-5">
+      <h2 th:text="${product.name}">Product Name</h2>
+      <p th:text="${product.category.name}">Category Name</p>
+      <h2>Rs. <span th:text="${product.price}"></span></h2>
+
+      <p th:text="${product.description}">Product Description</p>
+      <a class="btn" href="" th:href="@{/addToCart/{id}(id = ${product.id})}">Add to cart</a>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

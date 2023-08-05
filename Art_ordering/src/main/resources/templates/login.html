@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css">
+  <title>ARTHUB - Login</title>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="/"><img src="../static/images/logo.png" th:src="@{/images/logo.png}" alt="ARTHUB Logo"
+                       class="logo"></a>
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#" th:href="@{/login}" sec:authorize="isAnonymous()">Sign In</a>
+          </li>
+          <li>
+            <a href="#" th:href="@{/register}" sec:authorize="isAnonymous()">Register</a>
+          </li>
+          <li>
+            <a href="#" th:href="@{/logout}" sec:authorize="isAuthenticated()">Sign Out</a>
+          </li>
+          <li>
+            <a href="#" th:href="@{/shop}">Browse Art</a>
+          </li>
+          <li>
+            <a href="#" th:href="@{/cart}">Your Cart</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="login-container">
+  <div class="logo">
+    <img src="../static/images/logo.png" th:src="@{/images/logo.png}" alt="ARTHUB Logo">
+  </div>
+  <form class="input-group" id="Login" th:action="@{/login}" method="post">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" class="input-field" placeholder="Enter Email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" class="input-field" placeholder="Enter Password"
+             required>
+      <div th:if="${param.error}" class="error">
+        Incorrect email or password.
+      </div>
+    </div>
+    <button type="submit" class="submit-btn">Sign In</button>
+  </form>
+</div>
+</body>
+
+</html>

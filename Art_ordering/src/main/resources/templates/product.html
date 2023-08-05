@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/css/product.css}" href="../static/css/product.css">
+  <title>Document</title>
+</head>
+
+<body>
+<div class="navbar">
+  <div class="logo">
+    <img th:src="@{/images/logo.png}" src="../static/images/logo.png" alt="Logo">
+  </div>
+  <div class="nav-items">
+    <a href="#" th:href="@{/admin}" class="nav-link">Admin Home</a>
+    <a href="#" th:href="@{/logout}" class="nav-link">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+  <a th:href="@{/admin/product/add}" class="btn primary-btn">Add Product</a>
+  <table class="custom-table">
+    <thead>
+    <tr>
+      <th>SN</th>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Preview</th>
+      <th>Delete</th>
+      <th>Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product, iStat : ${products}">
+      <th scope="row" th:text="${iStat.index + 1}">1</th>
+      <td th:text="${product.name}">Adarsh</td>
+      <td th:text="${product.category.name}">Adarsh</td>
+      <td><img src="" height="100px" width="100px" th:src="@{${'/productImages/' + product.imageName}}">
+      </td>
+
+      <td><a href="" th:href="@{/admin/product/delete/{id}(id=${product.id})}"
+             class="btn danger-btn">Delete</a></td>
+      <td><a href="" th:href="@{/admin/product/update/{id}(id=${product.id})}"
+             class="btn warning-btn">Update</a></td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+
+</html>

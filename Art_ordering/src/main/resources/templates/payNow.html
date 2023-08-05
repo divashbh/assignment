@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .order-details {
+      margin-top: 30px;
+    }
+    .order-details p {
+      margin: 5px;
+    }
+    .order-details strong {
+      font-weight: bold;
+    }
+    .thank-you {
+      text-align: center;
+      margin-top: 30px;
+      color: #007bff;
+    }
+    .shop-more-btn {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .shop-more-btn a {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .shop-more-btn a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Order Placed</h1>
+
+  <div class="thank-you">
+    <p>Thank you for your order!</p>
+    <p>We will process your order and notify you once it's shipped.</p>
+    <div class="shop-more-btn">
+      <a href="shop.html" th:href="@{/shop}">Shop More</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

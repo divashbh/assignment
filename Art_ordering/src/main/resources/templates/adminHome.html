@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link rel="stylesheet" th:href="@{/css/adminHome.css}" href="../static/css/adminHome.css">
+</head>
+
+<body>
+<header class="navbar">
+  <div class="container">
+    <div class="logo">
+      Art<span>Admin</span>
+    </div>
+    <div class="nav-items">
+      <a href="#" th:href="@{/admin}" class="nav-link">Home</a>
+      <a href="#" th:href="@{/logout}" class="nav-link">Logout</a>
+    </div>
+  </div>
+</header>
+<div class="group">
+  <div class="welcome-container">
+    <div class="welcome-box">
+      <h1>Welcome back, Admin</h1>
+      <p>Manage your creative canvas from this Artistic Admin Dashboard</p>
+    </div>
+  </div>
+
+  <div class="box-container">
+    <div class="box">
+      <h2>Categories</h2>
+      <p>Create and organize the categories here.</p>
+      <a href="#" th:href="@{/admin/categories}" class="manage-link">Create</a>
+    </div>
+    <div class="box">
+      <h2>Artworks</h2>
+      <p>Curate and showcase your art pieces.</p>
+      <a href="#" th:href="@{/admin/product}" class="manage-link">Create</a>
+    </div>
+  </div>
+</div>
+
+<!-- Include any other Thymeleaf code or templates here -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include any other JavaScript files here -->
+</body>
+
+</html>

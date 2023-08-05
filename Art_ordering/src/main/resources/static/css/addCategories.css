@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #007BFF; /* Bluish background color */
+}
+
+nav {
+    background-color: #1E90FF; /* Dodger Blue - Artistic navbar background color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.nav-item a {
+    color: #333; /* Dark gray text color */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20px; /* Rounded borders */
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #1E90FF; /* Dodger Blue border color */
+    background-color: #87CEFA; /* Light Sky Blue background color */
+    border-radius: 20px; /* Rounded borders */
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1E90FF; /* Dodger Blue text color */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #1E90FF; /* Dodger Blue border color */
+    border-radius: 10px; /* Rounded borders */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Bluish primary button color */
+    color: #fff; /* White text color */
+    border: none;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded borders */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"th:href="@{/css/shop.css}" href="../static/css/shop.css">
+  <title>Document</title>
+</head>
+
+<body>
+<nav>
+  <a href="/"><img src="../images/logo-final.png" th:src="@{/images/logo.png}"></a>
+  <div class="nav-links">
+    <ul>
+      <li><a class="nav-link" th:href="@{/}" href="#">Home</a></li>
+      <li>
+        <a class="nav-link" th:href="@{/shop}" href="#">Shop</a>
+      </li>
+      <li>
+        <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login}" href="#">Login</a>
+      </li>
+      <li>
+        <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">Logout</a>
+      </li>
+      <li>
+        <a class="nav-link" th:href="@{/cart}" href="#">Cart</a>
+        <span class="cart-count" th:text="${cartCount}">0</span>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="height">
+  <div class="full">
+    <div class="Categories">
+      <h4>Categories</h4>
+      <ul class="list-group">
+        <a th:href="@{/shop}">
+          <li class="list-group-item">All Products</li>
+        </a>
+        <a th:each="category, iStat : ${category}" th:href="@{/shop/category/{id}(id=${category.id})}" href="#">
+          <li class="list-group-item" th:text="${category.name}"></li>
+        </a>
+      </ul>
+    </div>
+    <div class="Product">
+      <div class="Box" th:each="product : ${product}">
+        <div class="Image_Text">
+          <div class="Image">
+            <img class="" height="150px" width="150px" th:src="@{${'/productImages/' + product.imageName}}"
+                 th:alt="${product.name}">
+          </div>
+          <div class="Description">
+            <div class="card-body">
+              <h5 class="card-title" th:text="${product.name}"></h5>
+              <h4>Rs. <span th:text="${product.price}"></span></h4>
+              <p th:text="${product.description}">This Project Was developed by Adarsh Rawal</p>
+              <a href="#" th:href="@{/shop/viewProduct/{id}(id=${product.id})}" class="button">View Product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
